@@ -11,8 +11,9 @@ import { motion } from 'framer-motion';
 import { io } from 'socket.io-client';
 import api from '../api';
 
-const socket = io('http://localhost:5000');
-
+const socket = io(
+  'https://chatapp-backend-c48g.onrender.com'
+);
 export default function Dashboard() {
 
   const [user, setUser] = useState(null);
@@ -61,7 +62,7 @@ export default function Dashboard() {
       try {
 
         const res = await fetch(
-          'http://localhost:5000/api/users'
+          'https://chatapp-backend-c48g.onrender.com/api/users'
         );
 
         const data = await res.json();
