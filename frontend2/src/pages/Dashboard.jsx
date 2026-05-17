@@ -12,7 +12,10 @@ import { io } from 'socket.io-client';
 import api from '../api';
 
 const socket = io(
-  'https://chatapp-backend-c48g.onrender.com'
+  "https://chatapp-backend-c48g.onrender.com",
+  {
+    transports: ["websocket", "polling"],
+  }
 );
 export default function Dashboard() {
 
