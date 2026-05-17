@@ -64,9 +64,9 @@ export default function Dashboard() {
 
       try {
 
-        const res = await fetch(
-          'https://chatapp-backend-c48g.onrender.com/api/users'
-        );
+       const res = await fetch(
+  "https://chatapp-backend-c48g.onrender.com/api/users"
+);
 
         const data = await res.json();
 
